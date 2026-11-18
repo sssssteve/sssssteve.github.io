@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head>
+<script src="appearance.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Dongchen Zheng's research in embodied AI, robot learning and policy evaluation.">
+<title>Dongchen Zheng</title><link rel="stylesheet" href="style.css">
+<script src="gallery.js" defer></script></head><body>
+<header><div class="top"><a class="brand" href="#about"><b>DZ</b> Dongchen Zheng</a><nav aria-label="Page navigation"><a href="#research">Projects</a><a href="#papers">Papers</a><a href="#hardware">Robots</a><a href="#experience">Experience</a></nav><div class="prefs"><a class="lang" hreflang="zh-CN" href="index.html">中文</a><button type="button" class="theme" aria-label="Toggle light or dark mode"><span aria-hidden="true">◐</span></button></div></div></header>
+<main>
+<aside id="about">
+<img class="avatar" src="avatar.png" alt="Illustrated portrait wearing a graduation cap">
+<h1>Dongchen Zheng<span lang="en">郑冬辰</span></h1>
+<p class="role">MSc in Robotics and Intelligent Systems, The University of Hong Kong<br>Agentic Intelligence Lab × INFIFORCE<br>Research assistant · Supervisor <a href="https://agentic-intelligence-lab.org/members/jiayu-chen.html">Jiayu Chen ↗</a></p>
+<p>I hope to pursue a PhD in robot learning. In robot-use agents (RUA), I want to understand how an agent observes a scene, chooses a robot action and recovers when it goes wrong. In recursive self-improvement (RSI), I want to study how it can diagnose a failed trial, revise its own program and test whether the revision transfers to a new layout.</p>
+<p class="locations"><b>PhD locations of interest</b><span>🇭🇰 Hong Kong</span><span>🇸🇬 Singapore</span><span>🇺🇸 United States</span></p><div class="social"><a href="#interests">PhD research interests ↓</a><a href="https://github.com/sssssteve">GitHub ↗</a><a href="https://www.linkedin.com/in/stevezheng1120/">LinkedIn ↗</a></div>
+<p class="email"><b>Email</b><br><a href="mailto:2556870460@qq.com">2556870460@qq.com</a></p></aside>
+<div class="content">
+<section id="research"><div class="section-title"><h2>Selected projects</h2></div>
+<div class="feature">
+<small>Recent work · Co-first author</small><h3><a class="project-link" href="atomwam.en.html">AtomWAM<span aria-hidden="true"> →</span></a></h3>
+<p>We train a world action model in two stages using first-person human videos, robot data and historical replay. It predicts video and actions together, matches key observations to completed subtasks, and estimates how far an operation has progressed.</p>
+<div class="metrics"><div><strong>≈6,100</strong><span>hours of pretraining data</span></div><div><strong>14</strong><span>datasets</span></div><div><strong>18</strong><span>real-world evaluation tasks</span></div></div>
+</div>
+<div id="hardware"><h3 class="minor">Robots I work with</h3>
+<div class="robots" aria-label="Robot platform gallery">
+<button type="button" aria-label="Enlarge the Piper bimanual platform"><img src="platform.webp" alt="Piper bimanual platform"><span>Piper</span></button>
+<button type="button" aria-label="Enlarge the ARX bimanual platform"><img src="arx.webp" alt="ARX bimanual platform"><span>ARX</span></button>
+<button type="button" aria-label="Enlarge the Franka arm"><img src="franka.webp" alt="Franka single-arm platform"><span>Franka</span></button>
+</div></div>
+<div class="work-grid">
+<article><small>Robot-use agents</small><h3><a class="project-link" href="rax.en.html">Reproducing RAX<span aria-hidden="true"> →</span></a></h3><p>I reproduced RAX and worked on observation and control interfaces for Piper and Franka, tracing how model-generated programs call tools and move the arms.</p><a href="rax.en.html#demo">Watch the reproduction demo →</a></article>
+<article><small>Policy evaluation</small><h3><a class="project-link" href="evaluation.en.html">Evaluation<span aria-hidden="true"> →</span></a></h3><p>I compare checkpoint predictions on matched offline samples and record successes and failures on real robots as layouts and object appearances change.</p></article>
+</div>
+<div class="trajectory"><h3><a class="project-link" href="robodojo.en.html">cuRobo v2 · RoboDojo trajectories<span aria-hidden="true"> →</span></a></h3><p>I generated simulated manipulation trajectories in RoboDojo with cuRobo v2. This block-stacking episode shows synchronized head, left-wrist and right-wrist views, from left to right.</p>
+<video controls playsinline preload="metadata" src="stack-blocks.mp4" aria-label="Three synchronized camera views of simulated block stacking"></video></div>
+<h3 class="minor">Open-source tools</h3>
+<ul class="tools">
+<li><a href="vr-collector.en.html">RoboDojo VR Collector →</a><span>Collect bimanual demonstrations with VR controllers in simulation and save synchronized cameras, states and actions.</span></li>
+<li><a href="atom-0.en.html">Atom-0 →</a><span>Our lab's embodied pretraining framework compares dual action heads, progressive alignment and joint video–action modeling.</span></li>
+<li><a href="offline-eval.en.html">Unified Offline Evaluation →</a><span>Compare π₀.₅ and FastWAM checkpoints with consistent sampling, normalization and action-error metrics.</span></li>
+<li><a href="piper-rtc.en.html">Piper OpenPI · RTC &amp; TE →</a><span>Connect a JAX policy server to bimanual control using real-time chunking or temporal ensembling.</span></li>
+<li><a href="eval-atlas.en.html">Piper Eval Atlas →</a><span>Browse offline and physical evaluations of Piper checkpoints by task.</span></li>
+</ul></section>
+<section id="papers"><div class="section-title"><h2>Papers and technical reports</h2></div>
+<div class="row"><small>2026 · Co-first author</small><div><h3><a class="project-link" href="atomwam.en.html">AtomWAM<span aria-hidden="true"> →</span></a></h3><p lang="en">Continual Pretraining of World Action Models from Human Egocentric and Robot Data</p><p>CVPR 2027 submission. We evaluated continual pretraining on four simulation benchmarks and three physical robot platforms.</p></div></div>
+<div class="row"><small>2026 · Second author</small><div><h3><a href="atomego.en.html">AtomEgo →</a></h3><p lang="en">Exploring Ego–Robot Integration for Embodied Foundation Model Pretraining</p><p>We compare three ways to learn jointly from human and robot data and study when first-person demonstrations transfer to manipulation.</p>
+<details class="eval-case"><summary>Real-robot evaluation: what changes under distribution shift?</summary><p>Across seven tasks, the team ran 70 in-domain and 70 out-of-distribution trials per checkpoint. The task goal stayed fixed as positions, appearances or physical conditions changed. The reported Atom-CL checkpoint completed 30 of 70 out-of-distribution trials, compared with 16 for the robot-only VLA baseline.</p><a href="atomego.en.html#results">View project results →</a></details></div></div>
+<div class="row"><small>2026 · Co-author</small><div><h3><a href="tacenvelope.en.html">TacEnvelope →</a></h3><p lang="en">A Plug-in Framework for Utilizing Tactile Envelope Feedback in RL Post-Training of VLA Policies</p><p>Tactile feedback for reinforcement-learning post-training of vision-language-action policies.</p></div></div>
+<div class="row"><small>2026 · Co-author</small><div><h3><a href="georefiner.en.html">GeoRefiner →</a></h3><p lang="en">Geometry-Conditioned Plug-and-Play Action Refinement for Vision-Language-Action Models</p><p>Predict residual corrections from scene geometry to refine the trajectory proposed by a base policy.</p></div></div></section>
+
+<section id="interests"><div class="section-title"><h2>PhD research interests</h2></div>
+<div class="notes"><h3>RUA · Robot-Use Agents</h3><p>With a robot-use agent (RUA), the immediate question is what to do next. If the gripper misses, can the agent inspect another camera view, decide where to move, call the right tool and verify the result? Reproducing RAX lets me compare each generated command with what the arm actually did.</p><a href="rax.en.html#demo">Watch the RAX demo →</a></div>
+<div class="notes"><h3>RSI · Recursive Self-Improvement</h3><p>With recursive self-improvement (RSI), I want to study what changes between trials. Can an agent review a failed grasp, revise its observation routine or action program, and test the revision? I would compare both versions on matched layouts, then check whether the improvement carries over to unseen layouts.</p></div></section>
+<section id="experience"><div class="section-title"><h2>Education and experience</h2></div>
+<div class="row"><small>May 2026 — present</small><div><h3>Agentic Intelligence Lab × INFIFORCE</h3><p>Research assistant, supervised by <a href="https://agentic-intelligence-lab.org/members/jiayu-chen.html">Jiayu Chen ↗</a>. I work on joint human–robot pretraining, bimanual policy deployment, trajectory generation and real-robot evaluation.</p></div></div>
+<div class="row"><small>2026 — 2027</small><div><h3>The University of Hong Kong</h3><p>MSc student in Robotics and Intelligent Systems.</p></div></div>
+<div class="row"><small>2025.02 — 05</small><div><h3>Roborock · IT intern</h3><p>I built and deployed a Feishu assistant for employee expense claims and helped test and release updates to Dynamics 365.</p></div></div>
+<div class="row"><small>2021 — 2025</small><div><h3>Northeastern University</h3><p>BSc in Automation, with a focus on AI. In our<a class="project-link" href="multi-agent.en.html">multi-agent UAV project →</a>, I used A* demonstrations, imitation learning and CNN-DQN to study cooperative planning at different obstacle densities.</p></div></div>
+<div class="notes"><h3>Selected honors</h3><p>Gold award, Northeast division of the optoelectronic design competition · National third prize, TRIZ · Liaoning second prize, mathematical modeling · College scholarship, Northeastern University.</p></div>
+</section>
+</div></main><footer><span>Dongchen Zheng</span><a href="#about">Back to top ↑</a></footer>
+<dialog id="viewer" aria-labelledby="robot-name"><div class="viewer-head"><strong id="robot-name" aria-live="polite"></strong><button class="close" aria-label="Close enlarged image">×</button></div><img class="viewer-image" alt=""><div class="viewer-foot"><button class="prev">← Previous</button><button class="next">Next →</button></div></dialog>
+</body></html>

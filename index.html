@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<script src="appearance.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="郑冬辰的个人主页。具身模型、双臂机器人、示范采集与策略评测。">
+<title>郑冬辰 · Dongchen Zheng</title><link rel="stylesheet" href="style.css">
+<script src="gallery.js" defer></script></head><body>
+<header><div class="top"><a class="brand" href="#about"><b>DZ</b> Dongchen Zheng</a><nav aria-label="页面目录"><a href="#research">项目</a><a href="#papers">论文</a><a href="#hardware">本体</a><a href="#experience">经历</a></nav><div class="prefs"><a class="lang" hreflang="en" href="index.en.html">EN</a><button type="button" class="theme" aria-label="切换日光或夜间模式"><span aria-hidden="true">◐</span></button></div></div></header>
+<main>
+<aside id="about">
+<img class="avatar" src="avatar.png" alt="戴学士帽的黑白插画头像">
+<h1>郑冬辰<span lang="en">Dongchen Zheng</span></h1>
+<p class="role">香港大学 · 机器人与智能系统硕士<br>Agentic Intelligence Lab × INFIFORCE<br>研究助理 · 导师 <a href="https://agentic-intelligence-lab.org/members/jiayu-chen.html">Jiayu Chen ↗</a></p>
+<p>我希望攻读机器人学习方向的博士。在机器人智能体（RUA）方向，我想研究：接到任务后，智能体怎样观察现场、调用机器人，并在动作出错时调整？在递归自改进（RSI）方向，我想研究：一次尝试结束后，智能体能否从记录中找出失败原因，修改自己的程序，让下一次尝试更可靠？</p>
+<p class="locations"><b>博士申请意向地区</b><span>🇭🇰 香港</span><span>🇸🇬 新加坡</span><span>🇺🇸 美国</span></p><div class="social"><a href="#interests">博士研究兴趣 ↓</a><a href="https://github.com/sssssteve">GitHub ↗</a><a href="https://www.linkedin.com/in/stevezheng1120/">LinkedIn ↗</a></div>
+<p class="email"><b>联系邮箱</b><br><a href="mailto:2556870460@qq.com">2556870460@qq.com</a></p></aside>
+<div class="content">
+<section id="research"><div class="section-title"><h2>研究与作品</h2><small>Selected work</small></div>
+<div class="feature">
+<small>近期工作 · 共同第一作者</small><h3><a class="project-link" href="atomwam.html">AtomWAM<span aria-hidden="true"> →</span></a></h3>
+<p>我们让世界动作模型分两个阶段学习人类第一视角视频与机器人数据，并回放历史样本。模型联合预测视频与动作，用关键观测记住已完成的子任务，同时估计操作进度。</p>
+<div class="metrics"><div><strong>约 6,100</strong><span>小时预训练数据</span></div><div><strong>14</strong><span>个数据集</span></div><div><strong>18</strong><span>项真机评测任务</span></div></div>
+</div>
+<div id="hardware"><h3 class="minor">熟悉的机器人本体</h3>
+<div class="robots" aria-label="机器人本体图集">
+<button type="button" aria-label="放大 Piper 双臂平台"><img src="platform.webp" alt="Piper 双臂平台"><span>Piper</span></button>
+<button type="button" aria-label="放大 ARX 双臂平台"><img src="arx.webp" alt="ARX 双臂平台"><span>ARX</span></button>
+<button type="button" aria-label="放大 Franka 单臂平台"><img src="franka.webp" alt="Franka 单臂平台"><span>Franka</span></button>
+</div></div>
+<div class="work-grid">
+<article><small>机器人智能体</small><h3><a class="project-link" href="rax.html">RAX 复现<span aria-hidden="true"> →</span></a></h3><p>我复现过 RAX，在 Piper 和 Franka 上调试视觉观测与控制接口，跟踪模型生成的程序如何调用工具、驱动机械臂。</p><a href="rax.html#demo">观看复现演示 →</a></article>
+<article><small>策略评测</small><h3><a class="project-link" href="evaluation.html">Evaluation<span aria-hidden="true"> →</span></a></h3><p>我做过策略的离线评测和真机评测。离线比较不同检查点在相同样本上的动作预测误差，真机则按任务记录成功与失败，比较布局或物体外观变化后的表现。</p></article>
+</div>
+<div class="trajectory"><h3><a class="project-link" href="robodojo.html">cuRobo v2 · RoboDojo 轨迹生成<span aria-hidden="true"> →</span></a></h3><p>我用 cuRobo v2 在 RoboDojo 仿真环境中生成操作轨迹。下面是一段叠方块示例，从左到右分别是头部、左腕和右腕相机的同步画面。</p>
+<video controls playsinline preload="metadata" src="stack-blocks.mp4" aria-label="RoboDojo 仿真叠方块轨迹的三路同步视频"></video></div>
+<h3 class="minor">开源工具</h3>
+<ul class="tools">
+<li><a href="vr-collector.html">RoboDojo VR Collector →</a><span>在仿真中用 VR 手柄采集双臂示范，同步记录相机画面、机器人状态和动作。</span></li>
+<li><a href="atom-0.html">Atom-0 →</a><span>实验室的具身预训练框架，比较双动作头、渐进式对齐和视频动作联合建模三条路线。</span></li>
+<li><a href="offline-eval.html">Unified Offline Evaluation →</a><span>统一 π₀.₅ 与 FastWAM 的采样、归一化和动作误差计算，便于比较不同检查点。</span></li>
+<li><a href="piper-rtc.html">Piper OpenPI · RTC &amp; TE →</a><span>连接 JAX 策略服务与双臂控制，分别实现实时动作分块和重叠预测的时序集成。</span></li>
+<li><a href="eval-atlas.html">Piper Eval Atlas →</a><span>集中浏览 Piper 检查点的离线评测与真机实验记录。</span></li>
+</ul></section>
+<section id="papers"><div class="section-title"><h2>论文与技术报告</h2><small>Research papers</small></div>
+<div class="row"><small>2026 · 共同第一作者</small><div><h3><a class="project-link" href="atomwam.html">AtomWAM<span aria-hidden="true"> →</span></a></h3><p lang="en">Continual Pretraining of World Action Models from Human Egocentric and Robot Data</p><p>CVPR 2027 投稿。团队在四个仿真基准和三个真机平台上评估持续预训练后的操作能力。</p></div></div>
+<div class="row"><small>2026 · 第二作者</small><div><h3><a href="atomego.html">AtomEgo →</a></h3><p lang="en">Exploring Ego–Robot Integration for Embodied Foundation Model Pretraining</p><p>比较三种联合学习方式，研究第一视角人类数据何时能帮助机器人操作。</p>
+<details class="eval-case"><summary>真机评测案例 · 环境变化后，策略还能成功吗？</summary><p>在七项真机任务中，团队为每个检查点安排了 70 次常规测试和 70 次分布外测试。后者保留任务目标，改变物体位置、外观或物理条件。论文所报告的最佳检查点中，渐进式对齐方法 Atom-CL 在分布外测试中成功 30/70 次，仅用机器人数据训练的 VLA 基线成功 16/70 次。</p><a href="atomego.html#results">查看项目评测表 →</a></details></div></div>
+<div class="row"><small>2026 · 共同作者</small><div><h3><a href="tacenvelope.html">TacEnvelope →</a></h3><p lang="en">A Plug-in Framework for Utilizing Tactile Envelope Feedback in RL Post-Training of VLA Policies</p><p>将触觉反馈引入视觉语言动作策略的强化学习后训练。</p></div></div>
+<div class="row"><small>2026 · 共同作者</small><div><h3><a href="georefiner.html">GeoRefiner →</a></h3><p lang="en">Geometry-Conditioned Plug-and-Play Action Refinement for Vision-Language-Action Models</p><p>用场景几何信息预测动作残差，修正已有策略给出的操作轨迹。</p></div></div></section>
+
+<section id="interests"><div class="section-title"><h2>博士研究兴趣</h2><small>Research interests</small></div>
+<div class="notes"><h3>RUA · Robot-Use Agents</h3><p>我关心智能体如何把机器人作为工具使用：根据相机观测选择下一步动作，调用控制接口，再根据执行反馈决定继续、调整还是重试。复现 RAX 时，我可以把生成的程序与机械臂的实际动作对照起来。这也是我想进一步研究的地方。</p><a href="rax.html#demo">观看 RAX 复现演示 →</a></div>
+<div class="notes"><h3>RSI · Recursive Self-Improvement</h3><p>我想研究机器人智能体能否利用自己的执行记录改进下一版策略。例如，一次抓取失败后，系统能否提出新的观测方式或修改动作程序？我尤其关心如何在相同条件下比较修改前后的表现，再换一批任务布局，检验改动是否值得保留。</p></div></section>
+<section id="experience"><div class="section-title"><h2>教育与经历</h2><small>Background</small></div>
+<div class="row"><small>2026.05 — 至今</small><div><h3>Agentic Intelligence Lab × INFIFORCE</h3><p>研究助理，导师为 <a href="https://agentic-intelligence-lab.org/members/jiayu-chen.html">Jiayu Chen（陈佳玉）↗</a>。参与人类与机器人数据的联合预训练，开展双臂策略部署、仿真轨迹生成与真机评测。</p></div></div>
+<div class="row"><small>2026 — 2027</small><div><h3>香港大学</h3><p>机器人与智能系统硕士研究生。</p></div></div>
+<div class="row"><small>2025.02 — 05</small><div><h3>石头科技 · IT 实习生</h3><p>独立搭建并部署飞书财务报销助手，协助员工查询报销流程；参与 Dynamics 365 更新测试及上线。</p></div></div>
+<div class="row"><small>2021 — 2025</small><div><h3>东北大学</h3><p>自动化本科，人工智能方向。在<a class="project-link" href="multi-agent.html">无人机集群控制项目 →</a>中，以 A* 生成专家路径，再用模仿学习和 CNN-DQN 训练多机协同策略，比较不同障碍密度下的路径规划表现。</p></div></div>
+<div class="notes"><h3>竞赛与荣誉</h3><p>光电设计竞赛东北赛区金奖 · TRIZ 国家三等奖 · 数学建模辽宁省二等奖 · 东北大学院三等奖学金</p></div>
+</section>
+</div></main><footer><span>郑冬辰 · Dongchen Zheng</span><a href="#about">返回顶部 ↑</a></footer>
+<dialog id="viewer" aria-labelledby="robot-name"><div class="viewer-head"><strong id="robot-name" aria-live="polite"></strong><button class="close" aria-label="关闭大图">×</button></div><img class="viewer-image" alt=""><div class="viewer-foot"><button class="prev">← 上一台</button><button class="next">下一台 →</button></div></dialog>
+</body></html>

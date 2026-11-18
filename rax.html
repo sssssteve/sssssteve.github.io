@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><script src="appearance.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RAX 复现 · 郑冬辰</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="top"><a class="brand" href="index.html"><b>DZ</b> Dongchen Zheng</a><a href="index.html#research">← 返回主页</a><div class="prefs"><a class="lang" hreflang="en" href="rax.en.html">EN</a><button type="button" class="theme" aria-label="切换日光或夜间模式"><span aria-hidden="true">◐</span></button></div></div></header>
+<main class="project-detail"><article><h1>RAX 复现</h1><div class="resources"><a href="https://github.com/robot-agent-exploration/rax">上游 GitHub ↗</a><a href="#demo">复现演示 ↓</a></div><small>机器人智能体 · 复现实践</small><p class="lead">从模型生成的程序，到机械臂实际执行的动作。</p><section id="demo" aria-labelledby="demo-title">
+<h2 id="demo-title">RAX 复现演示</h2>
+<video class="rax-demo" controls playsinline preload="metadata" src="rax-demo.mp4" aria-labelledby="demo-title"></video>
+</section>
+<h2>我复现了什么</h2><p>我在 Piper 和 Franka 上调试 RAX 的观测与工具调用流程。模型读取相机画面和任务指令，生成调用机器人工具的程序；在工作台中可以审阅程序、单独执行并查看反馈。</p><h2>一个实际的调试问题</h2><p>在螺丝放置任务中，主视角里夹爪与工件看起来已经对齐，深度方向却仍可能有偏差。我用侧视画面对照夹爪位置，再沿着视觉定位、坐标标定和动作执行三个环节排查。保存当次程序和观测，有助于判断下一轮应该调整哪一步。</p><div class="detail-robots"><figure><img src="platform.webp" alt="Piper 双臂平台"><figcaption>Piper</figcaption></figure><figure><img src="franka.webp" alt="Franka 单臂平台"><figcaption>Franka</figcaption></figure></div></article></main></body></html>
